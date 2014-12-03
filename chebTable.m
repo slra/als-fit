@@ -9,7 +9,7 @@ function H = chebTable(l)
 %     H - (l+1)x(l+1) matrix such that
 %         H(i,j) = 0, if  i + j > l+2, and
 %         h_k(s,j)  = H(1,s+1) s^0 j^k + ... + H(s+1,1) s^k j^0,
-%         are homogenized Chebyshev polynomials
+%         are homogenized Chebyshev polynomials of the first kind
 %
 % See also nushift
   H = zeros(l+1,l+1);

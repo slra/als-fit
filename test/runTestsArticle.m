@@ -1,13 +1,14 @@
+% This file reruns all tests from the article
+
+addpath ..
 echo on
 warning off
-runGenTable
+testGenTable
 testTransRotInvar
 testRotInvar
 
 testConsistency
 testConsistencySclust
 
-%testCluster
-%goodExamples
 warning on
 echo off

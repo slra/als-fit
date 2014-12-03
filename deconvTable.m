@@ -1,6 +1,6 @@
 function H = deconvTable(moments)
 %DECONVTABLE computes the deconvolution polynomials for arbitrary measure
-%   H = deconvTable(l)
+%   H = deconvTable(moments)
 %
 %   Input arguments:
 %     moments - the sequence of moments for a measure

@@ -1,14 +1,11 @@
-function [theta, sh, evorig] = alsUsigmaFit(D, A, type)
+function [theta, sh, evorig] = alsUsigmaFit(D, A, moments)
 %ALSUSIGMAFIT computes the ALS estimator with unknown variance (ALS2)
-%   [theta, sh] = alsUsigmaFit(D, A, type)
+%   [theta, sh] = alsUsigmaFit(D, A, moments)
 %
 %   Input arguments:
-%     D     - matrix of data points
-%     A     - matrix of multi degrees
-%     type  - type of the polynomials used, either:
-%                'hermite' for Hermite polynomials (default)
-%                'chebyshev' for Chebyshev polynomials
-%                'uniform' for deconvolution polynomials
+%     D       - matrix of data points
+%     A       - matrix of multi degrees
+%     moments - (optional) moments of a probability measure (other than normal)
 %
 %   Output arguments:
 %     theta  - the estimated parameters
@@ -19,17 +16,10 @@ function [theta, sh, evorig] = alsUsigmaFit(D, A, type)
   M = momMatr(D, boxSet(2 * max(A, [], 2)'));
   maxdeg = max(sum(A));
   
-  if (nargin < 3 || strcmp(type, 'hermite'))
+  if (nargin < 3)
     H = hermTable(maxdeg*2);
   else
-    if (strcmp(type, 'chebyshev'))
-      H = chebTable(maxdeg*2);
-    else
-      l = maxdeg*2;
-      moments = 1./((1:l+1).*(2.^(0:l)));
-      moments(2:2:end) = 0;
-      H = deconvTable(moments);
-    end
+    H = deconvTable(moments);
   end  
   
   psi_array = cell(maxdeg+1,1);
