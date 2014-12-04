@@ -12,9 +12,9 @@ including the ordinary least squares and adjusted least squares methods describe
 Using the package
 -----------------
 
-The main four functions are algebraicFit, geometricFit, alsKsigmaFit and alsUsigmaFit.
+The main four functions are `algebraicFit`, `geometricFit`, `alsKsigmaFit` and `alsUsigmaFit`.
 
-All the functions have a similar interface
+All the functions have a common interface
     
     [theta, ...] = xxxxFit(D, A, ...)
 
