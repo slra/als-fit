@@ -5,6 +5,7 @@ function [F] = thetaPolyEvaluate(D, A, theta)
 %   Input arguments:
 %     A - (q x m) matrix of multidegrees
 %     D - (q x N) matrix of data points
+%     theta - the vector of polynomial coefficients
 %
 %   Output arguments:
 %     F - (N x 1) vector of evaluations

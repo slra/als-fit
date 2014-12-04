@@ -1,5 +1,5 @@
 function A = degSet(q, l)
-%DEGSET creates the integer matrix for the degree-constrained set
+%DEGSET creates an integer matrix for the degree-constrained set
 %   A = degSet(q,l)
 %
 %   Input arguments:
@@ -9,7 +9,14 @@ function A = degSet(q, l)
 %   Output arguments:
 %     A - integer matrix for all multidegrees of total degree l, 
 %         such that A ~ { a : |a| = l }.
-%         a graded order is used (similar to grlex)
+%
+%        Degree negative degree lexicographic is used, i.e.
+%          (a_1,...,a_q) < (b_1,..., b_q) if
+%            either (a_1 + ... + a_q) <  (b_1,...,b_q)
+%            or there exists i, 1 <= i <= q such that
+%               a_1 = b_1, ..., a_{i+1} = b_{i+1}, a_i > b_i   
+%
+%        This order permits a recursive generation.
 %
 %   For example, degSet(3,2) returns 
 %     2     1     1     0     0     0

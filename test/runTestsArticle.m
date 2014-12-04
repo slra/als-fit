@@ -4,6 +4,8 @@ addpath ..
 echo on
 warning off
 testGenTable
+
+testExamplesIntro
 testTransRotInvar
 testRotInvar
 

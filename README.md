@@ -12,8 +12,18 @@ including the ordinary least squares and adjusted least squares methods describe
 Using the package
 -----------------
 
-All the separate functions are documented. Help for the functions can be obtained by typing
-`help ...`
+The main four functions are algebraicFit, geometricFit, alsKsigmaFit and alsUsigmaFit.
 
- Examples of usage are contained in dte directory `test`,
- where the reproducible examples from the paper are contained.
+All the functions have a similar interface
+    
+    [theta, ...] = xxxxFit(D, A, ...)
+
+where D is an array of data point and A is the matrix of multidegrees,
+and theta is the computed estimate.
+
+All the separate functions are documented, 
+help for the functions can be obtained by typing `help ...`.
+The list of functions can be obtaioned
+
+Examples of usage can be found contained in the directory `test`,
+where the reproducible examples from the paper are contained.

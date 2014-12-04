@@ -1,5 +1,5 @@
 function A = trgSet(q, l)
-%TRGSET creates the integer matrix for the triangular set
+%TRGSET creates the multidegree matrix for the triangular set
 %   A = trgSet(q,l)
 %
 %   Input arguments:
@@ -9,7 +9,9 @@ function A = trgSet(q, l)
 %   Output arguments:
 %     A - integer matrix for all multidegrees of total degree  <= l, 
 %        such that A ~ { a : |a| <= l }
-%         a graded order is used (similar to grlex)
+%        A graded order is used, induced by degSet.
+%        (The multidegrees are ordered by total degree, and then by 
+%         the order defined in degSet.)
 %
 %   For example, trgSet(2,3) returns 
 %     0     1     0     2     1     0     3     2     1     0
