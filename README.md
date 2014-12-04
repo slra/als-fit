@@ -1,9 +1,9 @@
-ALS: adjusted least squares for algerbraic hypersurface fitting
+ALS-FIT: adjusted least squares for algebraic hypersurface fitting
 ==============================================================================
 This package contains a collection of functions for algebraic hypersurface fitting,
 including the ordinary least squares and adjusted least squares methods described in
 
-    @Article{als14,
+    @techreport{als14,
         author = {I. Markovsky and K. Usevich},
         title = {Adjusted least squares estimator for algebraic hypersurface fitting},
         year = {2014},
