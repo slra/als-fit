@@ -5,7 +5,9 @@ including the ordinary least squares and adjusted least squares methods describe
 
     @techreport{als14,
         author = {I. Markovsky and K. Usevich},
-        title = {Adjusted least squares estimator for algebraic hypersurface fitting},
+        title = {Adjusted least squares fitting of algebraic hypersurfaces},
+        url = {http://arxiv.org/abs/1412.2291},
+        pdf = {http://arxiv.org/pdf/1412.2291v1.pdf},
         year = {2014},
     }
 
