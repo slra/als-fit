@@ -10,11 +10,11 @@ function A = degSet(q, l)
 %     A - integer matrix for all multidegrees of total degree l, 
 %         such that A ~ { a : |a| = l }.
 %
-%        Degree negative degree lexicographic is used, i.e.
+%        Degree negative lexicographic order ("degneglex") is used, i.e.
 %          (a_1,...,a_q) < (b_1,..., b_q) if
-%            either (a_1 + ... + a_q) <  (b_1,...,b_q)
+%            either (a_1 + ... + a_q) <  (b_1 + ... + b_q)
 %            or there exists i, 1 <= i <= q such that
-%               a_1 = b_1, ..., a_{i+1} = b_{i+1}, a_i > b_i   
+%               a_1 = b_1, ..., a_{i-1} = b_{i-1}, a_i > b_i   
 %
 %        This order permits a recursive generation.
 %
