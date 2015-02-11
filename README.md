@@ -4,7 +4,7 @@ This package contains a collection of functions for algebraic hypersurface fitti
 including the ordinary least squares and adjusted least squares methods described in
 
     @techreport{als14,
-        author = {I. Markovsky and K. Usevich},
+        author = {K. Usevich and I. Markovsky},
         title = {Adjusted least squares fitting of algebraic hypersurfaces},
         url = {http://arxiv.org/abs/1412.2291},
         pdf = {http://arxiv.org/pdf/1412.2291v1.pdf},
